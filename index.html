@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT Panel</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { 
+            background-color: #0a0a0a; 
+            color: #ffffff; 
+            font-family: monospace; 
+            padding: 20px; 
+            text-align: center;
+        }
+        h1 { 
+            color: #b300ff; 
+            text-shadow: 0 0 10px #b300ff; 
+            margin-bottom: 5px;
+        }
+        .sub { 
+            color: #666; 
+            font-size: 12px; 
+            margin-bottom: 30px;
+        }
+        button { 
+            background: transparent; 
+            border: 2px solid #b300ff; 
+            color: #ffffff; 
+            padding: 15px 20px; 
+            margin: 10px 0; 
+            border-radius: 10px; 
+            font-size: 16px; 
+            width: 100%; 
+            font-weight: bold;
+        }
+        button:active { background: #b300ff; color: #000; }
+    </style>
+</head>
+<body>
+    <h1>OSINT PRO</h1>
+    <div class="sub">TELEGRAM WEB APP</div>
+
+    <button onclick="send('/ip 8.8.8.8')">Проверить IP</button>
+    <button onclick="send('/username ivan')">Поиск по Нику</button>
+    <button onclick="send('/tg durov')">Telegram Инфо</button>
+    <button onclick="send('/tempmail')">Временная Почта</button>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand();
+        function send(cmd) {
+            tg.sendData(cmd);
+            tg.close();
+        }
+    </script>
+</body>
+</html>
