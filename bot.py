@@ -20,7 +20,7 @@ TOKEN = "8669608672:AAGag-1axn1qx24xtK0OAb2jSMGkcMnW2AI"
 ADMIN_ID = 8633674798 
 ADMIN_PIN = "1337"
 
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(TOKEN, threaded=False).
 app = Flask(__name__)
 
 # --- БАЗА ДАННЫХ ---
