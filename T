@@ -1,5 +1,0 @@
-pyTelegramBotAPI
-requests
-qrcode
-pillow
-dnspython
